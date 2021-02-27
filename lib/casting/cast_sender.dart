@@ -135,6 +135,11 @@ class CastSender extends Object {
       });
     }
   }
+  
+  void loadImage(String url){
+    Map<String, dynamic> map = {'url': url};
+    _castMediaAction('IMAGE', map);
+  }  
 
   void load(CastMedia media, {forceNext = true}) {
     loadPlaylist([media], forceNext: forceNext);
